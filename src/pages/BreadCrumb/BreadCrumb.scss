@@ -1,0 +1,20 @@
+@import "../../styles/mixins.scss";
+
+.breadcrumb-content {
+  @include flexAlign();
+  gap: 10px;
+  padding: 10px;
+  height: 45px;
+  border-radius: 4px;
+  background: white;
+
+  .bc-breadcrumb-trail, .bc-origin-home {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    .bcbt-text {
+      @include fontProperties(16px, 500, var(--textDark));
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import '../../styles/mixins.scss';
+.dtm-section{
+    height: 100%;
+    @include flexCenter();
+    @include fontProperties(16px, 500, black);
+}

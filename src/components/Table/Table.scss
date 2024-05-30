@@ -1,0 +1,38 @@
+@import "../../styles/mixins.scss";
+
+.table-container {
+  flex: 1;
+  height: 100%;
+  border-radius: 6px;
+  background-color: var(--white);
+  box-shadow: 0px 8px 16px #101c240d;
+
+  .tc-table {
+    width: 100%;
+    padding: 10px;
+
+    thead {
+        border-bottom: 1px solid #f2f6fa;
+
+
+      .tct-header {
+        text-align: left;
+      }
+    }
+
+    tbody tr {
+      height: 60px;
+      border-bottom: 1px solid #f2f6fa;
+    }
+  }
+
+  .loading {
+      display: flex;
+      color: #555;
+    height: 100px;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
