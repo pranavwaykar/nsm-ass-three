@@ -11,7 +11,11 @@ const Table = () => {
             {TableLayout.header.map((headerItem, index) => (
               <th key={index} className="tct-header">
                 {headerItem.content}
-                {headerItem.hasDownArrow && <i className="down-arrow"></i>}
+                {headerItem.hasDownArrow ? (
+                  <i className="icon-caret-down"></i>
+                ) : (
+                  <i className="icon-caret-up"></i>
+                )}
               </th>
             ))}
           </tr>
