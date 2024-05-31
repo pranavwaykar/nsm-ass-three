@@ -255,7 +255,7 @@ const TableLayout = {
         ],
       ]
       ,
-    isLoading: false
+    isLoading: true
   };
   
   export { TableLayout };

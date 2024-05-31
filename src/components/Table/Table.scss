@@ -11,10 +11,9 @@
     width: 100%;
     padding: 0px 10px;
 
-    thead {
-        border-bottom: 1px solid #f2f6fa;
-        height: 40px;
-
+    .tct-head {
+      border-bottom: 1px solid #f2f6fa;
+      height: 40px;
 
       .tct-header {
         text-align: left;
@@ -28,12 +27,14 @@
   }
 
   .loading {
-      display: flex;
-      color: #555;
-    height: 100px;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    color: #555;
     font-size: 1.2rem;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    background: rgb(245 245 220 / 95%);
+    @include flexCenter();
   }
-  
 }

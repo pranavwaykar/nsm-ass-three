@@ -6,7 +6,7 @@ const Table = () => {
   return (
     <div className="table-container">
       <table className="tc-table">
-        <thead>
+        <thead className="tct-head">
           <tr>
             {TableLayout.header.map((headerItem, index) => (
               <th key={index} className="tct-header">
