@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Table.scss";
 import { TableLayout } from "../../constants/TableLayout";
 
 const Table = () => {
+  const [openPopupIndex, setOpenPopupIndex] = useState(null);
+
+  const handlePopupToggle = (index) => {
+    setOpenPopupIndex(openPopupIndex === index ? null : index);
+  };
+
+  const handleBlur = (index) => {
+    if (openPopupIndex === index) {
+      setOpenPopupIndex(null);
+    }
+  };
+
   return (
     <div className="table-container">
       <table className="tc-table">
@@ -36,13 +48,36 @@ const Table = () => {
                 </td>
               ))}
               <td>
-                <i className="icon-ellipsis-vertical"></i>
+                <div
+                  className="popup-content"
+                  tabIndex={0}
+                  onBlur={() => handleBlur(rowIndex)}
+                  onClick={() => handlePopupToggle(rowIndex)}
+                >
+                  <i className="icon-ellipsis-vertical" />
+                  {openPopupIndex === rowIndex && <PopupOptions />}
+                </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       {TableLayout.isLoading && <div className="loading">Loading...</div>}
+    </div>
+  );
+};
+
+const PopupOptions = () => {
+  return (
+    <div className="popup-comp">
+      <div className="pc-sec">
+        <i className="icon-pen-to-square"></i>
+        <div className="pcs-text">Edit</div>
+      </div>
+      <div className="pc-sec">
+        <i className="icon-delete"></i>
+        <div className="pcs-text">Delete</div>
+      </div>
     </div>
   );
 };

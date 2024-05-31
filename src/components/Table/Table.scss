@@ -20,9 +20,41 @@
       }
     }
 
-    tbody tr {
-      height: 60px;
-      border-bottom: 1px solid #f2f6fa;
+    tbody {
+      tr {
+        height: 60px;
+        border-bottom: 1px solid #f2f6fa;
+
+        .popup-content {
+          width: 49px;
+          cursor: pointer;
+
+          .popup-comp {
+            right: 160px;
+            min-width: 100px;
+            position: absolute;
+            border-radius: 3px;
+            background-color: var(--white);
+            box-shadow: 0px 10px 40px #02090f26;
+
+            .pc-sec {
+              gap: 5px;
+              height: 28px;
+              padding: 0 7px;
+              border-bottom: 1px solid var(--inputLine);
+              @include flexAlign();
+
+              i {
+                @include fontProperties(18px, normal, var(--textDark));
+              }
+
+              .pcs-text {
+                @include fontProperties(13px, normal, var(--textDark));
+              }
+            }
+          }
+        }
+      }
     }
   }
 
