@@ -137,7 +137,7 @@ const TableLayout = {
             takesFullWidth: true
           },
           {
-            content: "Team c",
+            content: "Team C",
             isBold: false,
             action: () => {},
             width: 200,
